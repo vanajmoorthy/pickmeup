@@ -13,6 +13,22 @@ app.listen(PORT, () => {
 });
 
 // Routes
+app.get("/", (req, res) => {
+	let sql = "select * from lines";
+	let params = [];
+	db.all(sql, params, (err, rows) => {
+		if (err) {
+			res.status(400).json({ error: err.message });
+			return;
+		}
+		console.log(rows);
+		res.json({
+			message: "success",
+			data: rows,
+		});
+	});
+});
+
 app.get("/all", (req, res) => {
 	let sql = "select * from lines";
 	let params = [];
