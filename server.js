@@ -22,7 +22,8 @@ app.get("/all", (req, res) => {
 
 app.get("/random", (req, res) => {
 	let line = db[Math.floor(Math.random() * db.length)];
-	res.json(line);
+	let responseLine = [line]
+	res.json(responseLine);
 });
 
 // Default response for any other request
