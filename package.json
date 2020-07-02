@@ -4,7 +4,7 @@
   "description": "API that returns pickup lines",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
