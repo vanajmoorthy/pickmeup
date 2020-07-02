@@ -16,7 +16,13 @@ app.listen(PORT, () => {
 
 // Routes
 app.get("/", (req, res) => {
-	res.send("hello");
+	res.send(`<main>
+				<h3>Routes</h3>
+				<ul>
+					<li>/all (GET)</li>
+					<li>/random (GET)</li>
+				</ul>
+			  </main>`);
 });
 
 app.get("/all", (req, res) => {
