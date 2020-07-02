@@ -1,0 +1,28 @@
+{
+  "name": "pickmeup",
+  "version": "1.0.0",
+  "description": "API that returns pickup lines",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vanajmoorthy/pickmeup.git"
+  },
+  "keywords": [],
+  "author": "Vanaj Moorthy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vanajmoorthy/pickmeup/issues"
+  },
+  "homepage": "https://github.com/vanajmoorthy/pickmeup#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "sqlite3": "^5.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
