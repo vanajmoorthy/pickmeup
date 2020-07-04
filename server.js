@@ -1,8 +1,11 @@
 import express from "express";
-import lines from "./lines.js";
+// import lines from "./lines.js";
+import { readFileSync } from "fs"
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+let data = JSON.parse(readFileSync("./lines.json"));
 
 // Middleware
 app.use(express.json());
@@ -23,11 +26,13 @@ app.get("/", (req, res) => {
 });
 
 app.get("/all", (req, res) => {
-	res.json(lines);
+	console.log(data)
+	res.json(data);
 });
 
 app.get("/random", (req, res) => {
-	let line = lines[Math.floor(Math.random() * lines.length)];
+	let line = data[Math.floor(Math.random() * data.length)];
+
 	let responseLine = [line];
 	res.json(responseLine);
 });
