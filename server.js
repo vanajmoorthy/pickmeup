@@ -1,5 +1,4 @@
 import express from "express";
-// import lines from "./lines.js";
 import { readFileSync } from "fs"
 
 const app = express();
