@@ -13,7 +13,7 @@ app.listen(PORT, () => {
 
 // Routes
 app.get("/", (req, res) => {
-	res.send(`<main>
+	res.send(`<main style="margin: 30px;">
 				<h3>Routes</h3>
 				<ul>
 					<li>/all (GET)</li>
