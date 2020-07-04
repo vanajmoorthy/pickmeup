@@ -1,7 +1,5 @@
-const express = require("express");
-const db = require("./lines.json");
-
-const path = require("path");
+import express from "express";
+import lines from "./lines.js";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -25,11 +23,11 @@ app.get("/", (req, res) => {
 });
 
 app.get("/all", (req, res) => {
-	res.json(db);
+	res.json(lines);
 });
 
 app.get("/random", (req, res) => {
-	let line = db[Math.floor(Math.random() * db.length)];
+	let line = lines[Math.floor(Math.random() * lines.length)];
 	let responseLine = [line];
 	res.json(responseLine);
 });
